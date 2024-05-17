@@ -1,28 +1,38 @@
-pipeline {
-    agent { 
-        node {
-            label 'jenkins-agent-goes-here'
+pipeline
+{
+    agent
+    { 
+        node
+            {
+                label "l1-docker-agent-alpine"
             }
-      }
-    stages {
-        stage('Build') {
+    }
+    
+    stages
+    {
+        stage('Build')
+        {
             steps {
-                echo "Building.."
-                sh '''
-                echo "doing build stuff.."
-                '''
-            }
+                    echo "Building.."
+                    sh '''
+                    echo "doing build stuff.."
+                    '''
+                  }
         }
-        stage('Test') {
-            steps {
-                echo "Testing.."
-                sh '''
-                echo "doing test stuff..
-                '''
-            }
+        stage('Test')
+        {
+            steps
+                {
+                    echo "Testing.."
+                    sh '''
+                    echo "doing test stuff..
+                    '''
+                }
         }
-        stage('Deliver') {
-            steps {
+        stage('Deliver')
+        {
+            steps
+            {
                 echo 'Deliver....'
                 sh '''
                 echo "doing delivery stuff.."
