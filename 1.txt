@@ -1,0 +1,3 @@
+PS1='\e[38;5;123m\u\e[0m@\e[38;5;105m\h\e[0m\e[38;5;204m $PWD\e[0m: '
+alias cd..='cd ..'
+alias lh='ls -lh'
